@@ -1,14 +1,16 @@
 import customtkinter as ctk
+from PIL import Image
 from frames.levels_frame import LevelsFrame
 from frames.activity_frame import ActivityFrame
 from frames.compare_frame import CompareFrame
+
+
 
 
 def fetch_player_data(username):
     """Fetch player data from the API."""
     from api.api_client import fetch_player_data  # Import here to avoid circular imports
     return fetch_player_data(username)
-
 
 class RuneScapeStats(ctk.CTk):
     def __init__(self):
@@ -27,7 +29,8 @@ class RuneScapeStats(ctk.CTk):
         self.top_frame.pack(fill="x", pady=(0, 10))
 
         # Logo placeholder
-        self.logo_label = ctk.CTkLabel(self.top_frame, text="LOGO")
+        self.label_image = ctk.CTkImage(Image.open("resources/logo.jpg"), size=(60,60))
+        self.logo_label = ctk.CTkLabel(self.top_frame, image=self.label_image, text="")
         self.logo_label.pack(side="left", padx=10, pady=10)
 
         # Search entry
@@ -62,10 +65,12 @@ class RuneScapeStats(ctk.CTk):
 
         #Switches to Levels Frame and resizes geometry to default
     def on_levels_button_clicked(self):
+        """Show the levels frame and change window size geometry"""
         self.show_frame("levels")
         self.geometry("500x800")
 
     def on_activity_button_clicked(self):
+        """Show the activity frame and change window size geometry"""
         self.show_frame("activity")
         self.geometry("650x800")
         
