@@ -1,7 +1,5 @@
-import customtkinter as CTk
-
+from app import RuneScapeStats
 
 if __name__ == '__main__':
-    print(CTk.__version__)
-
-
+    app = RuneScapeStats()
+    app.mainloop()
