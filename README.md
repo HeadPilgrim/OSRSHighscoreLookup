@@ -1,5 +1,3 @@
-Here’s an improved version of your `README.md` with additional sections, better formatting, and more detailed information to make it more engaging and informative for users and contributors:
-
 ---
 
 # OSRS Highscore Lookup
