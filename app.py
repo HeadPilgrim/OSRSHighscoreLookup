@@ -5,14 +5,13 @@ from frames.activity_frame import ActivityFrame
 from frames.compare_frame import CompareFrame
 
 
-
-
 def fetch_player_data(username):
     """Fetch player data from the API."""
     from api.api_client import fetch_player_data  # Import here to avoid circular imports
     return fetch_player_data(username)
 
 class RuneScapeStats(ctk.CTk):
+    """Main application class."""
     def __init__(self):
         super().__init__()
 
@@ -29,7 +28,7 @@ class RuneScapeStats(ctk.CTk):
         self.top_frame.pack(fill="x", pady=(0, 10))
 
         # Logo placeholder
-        self.label_image = ctk.CTkImage(Image.open("resources/logo.jpg"), size=(60,60))
+        self.label_image = ctk.CTkImage(Image.open("assets/logo.jpg"), size=(60, 60))
         self.logo_label = ctk.CTkLabel(self.top_frame, image=self.label_image, text="")
         self.logo_label.pack(side="left", padx=10, pady=10)
 
@@ -46,7 +45,7 @@ class RuneScapeStats(ctk.CTk):
         self.nav_frame.pack(fill="x", pady=(0, 10))
 
         # Navigation buttons
-        self.levels_button = ctk.CTkButton(self.nav_frame, text="Levels", command=self.on_levels_button_clicked)
+        self.levels_button = ctk.CTkButton(self.nav_frame, text="Skills", command=self.on_levels_button_clicked)
         self.levels_button.pack(side="left", padx=5, pady=5)
 
         self.activity_button = ctk.CTkButton(self.nav_frame, text="Activity Highscores", command=self.on_activity_button_clicked)
