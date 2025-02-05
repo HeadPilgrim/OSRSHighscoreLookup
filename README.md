@@ -98,12 +98,12 @@ Here are some ideas for future improvements to the app:
 
 ```
 OSRSHighscoreLookup/
-├── __init__.py
 ├── main.py                # Starts the application
 ├── app.py                 # Main application script
 ├── requirements.txt       # List of dependencies
-├── frames/
-│   ├── __init__.py
+├── api/                   # Folder for all frame views
+│   └── api_client.py      # Fetches user data from OSRS API
+├── frames/                # Folder for all frame views
 │   ├── activity_frame.py  # Activity view structure and generation 
 │   ├── compare_frame.py   # Not implemented
 │   └── levels_frame.py    # Skills view structure and generation
