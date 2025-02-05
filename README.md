@@ -98,19 +98,19 @@ Here are some ideas for future improvements to the app:
 
 ```
 OSRSHighscoreLookup/
-├── main.py                # Starts the application
-├── app.py                 # Main application script
-├── requirements.txt       # List of dependencies
-├── api/                   # Folder for all frame views
-│   └── api_client.py      # Fetches user data from OSRS API
-├── frames/                # Folder for all frame views
-│   ├── activity_frame.py  # Activity view structure and generation 
-│   ├── compare_frame.py   # Not implemented
-│   └── levels_frame.py    # Skills view structure and generation
-├── assets/                # Folder for images and icons
-│   └── logo.png           # App logo
-├── README.md              # Project documentation
-└── ...                    # Other files
+├── main.py                # Entry point of the application; initializes and runs the app.
+├── app.py                 # Main application script; handles the GUI setup and navigation.
+├── requirements.txt       # Lists all Python dependencies required to run the application.
+├── api/                   # Contains modules for interacting with the OSRS Highscores API.
+│   └── api_client.py      # Handles API requests and fetches user data from the OSRS Highscores API.
+├── frames/                # Contains modules for different views/frames in the application.
+│   ├── activity_frame.py  # Defines the structure and logic for the activity/combat achievements view.
+│   ├── compare_frame.py   # Placeholder for future implementation of player comparison functionality.
+│   └── levels_frame.py    # Defines the structure and logic for the skill levels view.
+├── assets/                # Stores static files such as images, icons, and other resources.
+│   └── logo.png           # Application logo used in the GUI.
+├── README.md              # Project documentation; provides an overview, setup instructions, and usage details.
+└── ...                    # Other files or directories as needed.
 ```
 
 ---
