@@ -1,5 +1,3 @@
----
-
 # OSRS Highscore Lookup
 
 **A simple and intuitive app for looking up player highscores in the popular MMORPG Old School Runescape (OSRS).**
